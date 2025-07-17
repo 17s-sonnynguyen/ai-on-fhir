@@ -8,10 +8,10 @@ from app.fhir_simulator import find_patients_by_condition_and_age
 
 app = FastAPI()
 
-# Allow requests from frontend (localhost:3000)
+# Allow requests from deployed frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["https://ai-on-fhir-frontend-vs2n.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
