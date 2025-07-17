@@ -20,7 +20,7 @@ export default function Home() {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:8000/query", { query });
+      const response = await axios.post("https://ai-on-fhir-backend-b7c5.onrender.com/query", { query });
       setResults(response.data);
     } catch (err) {
       console.error("Error querying backend:", err);
